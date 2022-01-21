@@ -28,9 +28,18 @@ public class FindBooksServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
-        out.println("Hello from FindBooks GET Method");
+		
+		//for get parameters like symbol or any other form fields
+		String symbol = request.getParameter("symbol");
+		
+		response.setContentType("text/html");
+		
+		out.println("<html><body>");
+		out.println("<h1>Requested Book: " + symbol + "</h1>");
+		out.println("<h1>Price: "  + 1000 + "</h1>");
+		out.println("</body> </html>");
+				
         
 	}
 
@@ -38,8 +47,16 @@ public class FindBooksServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-        out.println("Hello from FindBooks POST Method");
+PrintWriter out = response.getWriter();
+		
+		//for get parameters like symbol or any other form fields
+		String symbol = request.getParameter("symbol");
+		response.setContentType("text/html");
+		
+		out.println("<html><body>");
+		out.println("<h1Requested Book: " + symbol + "</h1>");
+		out.println("<h1>Price: "  + 1000 + "</h1>");
+		out.println("</body> </html>");
         
 	}
 
